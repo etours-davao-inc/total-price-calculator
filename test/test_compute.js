@@ -15,7 +15,7 @@ var requiredReturnKeys = [
 
 describe('Compute', ()=> {
   it("Module Imported", ()=> {
-    assert.exists(App)
+    assert.exists(calculateTotal)
   })
   describe("Check return value", ()=> {
     it("Returned a value", ()=> {
@@ -26,3 +26,4 @@ describe('Compute', ()=> {
     })
   })
 })
+
