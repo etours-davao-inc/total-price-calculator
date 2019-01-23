@@ -1,5 +1,5 @@
 module.exports = {
-  compute: () => {
+  calculateTotal: () => {
     computedValues = {
       "adult_total": 0,
       "k02_total": 0,
