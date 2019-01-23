@@ -10,10 +10,10 @@ module.exports = {
     'balance'
   ],
   exampleInputValues : {
-  type: "daytour",
-  adult: [4,400],
-  k02: [1,100],
-  k35: [2,200],
-  k61: [3,300],
+    type: "daytour",
+    adult: [4,400],
+    k02: [1,100],
+    k35: [2,200],
+    k61: [3,300],
   }
 }
