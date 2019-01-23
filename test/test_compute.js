@@ -1,8 +1,8 @@
 const assert = require('chai').assert
 const expect = require('chai').expect
-const App = require('../compute.js')
+const calculateTotal = require('../calculateTotal.js').calculateTotal
 
-var returnValue = App.compute()
+var returnValue = calculateTotal()
 var requiredReturnKeys = [
   'adult_total',
   'k02_total',
@@ -21,8 +21,8 @@ describe('Compute', ()=> {
     it("Returned a value", ()=> {
       expect(returnValue).to.be.ok
     })
-    it("Returned required fields", ()=> {
-        expect(returnValue).to.have.keys(requiredReturnKeys)
+    it("Returned required fields", () => {
+      expect(returnValue).to.have.keys(requiredReturnKeys)
     })
   })
 })
