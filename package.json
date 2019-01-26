@@ -4,7 +4,8 @@
   "description": "Price computation in Javascript",
   "main": "compute.js",
   "scripts": {
-    "test": "mocha || true"
+    "start": "nodemon --exec babel-node ./calculateTotal.js",
+    "test": "./node_modules/.bin/mocha --compilers js:@babel/register"
   },
   "keywords": [
     "Price",
@@ -13,8 +14,14 @@
   "author": "Tom Claudio",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
     "babel-preset-env": "^1.7.0",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9"
   }
 }
