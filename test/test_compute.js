@@ -4,7 +4,7 @@ import {requiredReturnKeys, exampleInputValues} from '../Configurations.js'
 
 var returnValue = calculateTotal(exampleInputValues)
 
-describe('Compute Total', ()=> {
+describe('Compute Total using base price only', ()=> {
   it("Module Imported", ()=> {
     assert.exists(calculateTotal)
   })
