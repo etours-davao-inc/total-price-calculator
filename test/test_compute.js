@@ -4,7 +4,7 @@ import {requiredReturnKeys, exampleInputValues} from '../Configurations.js'
 
 var returnValue = calculateTotal(exampleInputValues)
 
-describe('Compute', ()=> {
+describe('Compute Total', ()=> {
   it("Module Imported", ()=> {
     assert.exists(calculateTotal)
   })
@@ -21,16 +21,16 @@ describe('Compute', ()=> {
     let downpayment = total/2
     let balance = total - downpayment
     it("Adult total is correct", () => {
-      expect(returnValue.adult_total).to.be.equal(4*400)
+      expect(returnValue.adult).to.be.equal(4*400)
     })
     it("k02 total is correct", () => {
-      expect(returnValue.k02_total).to.be.equal(1*100)
+      expect(returnValue.kid02).to.be.equal(1*100)
     })
     it("k35 total is correct", () => {
-      expect(returnValue.k35_total).to.be.equal(2*200)
+      expect(returnValue.kid35).to.be.equal(2*200)
     })
     it("k61 total is correct", () => {
-      expect(returnValue.k61_total).to.be.equal(3*300)
+      expect(returnValue.kid611).to.be.equal(3*300)
     })
     it("Total is correct", () => {
       expect(returnValue.total).to.be.equal(total)
