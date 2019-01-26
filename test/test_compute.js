@@ -1,10 +1,35 @@
 import {assert, expect} from 'chai';
-import calculateTotal from '../calculateTotal.js'
+import {calculateTotal, calculatePriceWithHotel} from '../Calculator.js'
 import {requiredReturnKeys, exampleInputValues} from '../Configurations.js'
 
-var returnValue = calculateTotal(exampleInputValues)
+
+
+describe('Compute price with hotel', () => {
+  let inputParameters = {
+    "basePrice":{
+      "adult": [4,400],
+      "kid02": [1,100],
+      "kid35": [2,200],
+      "kid611": [3,300],
+    },
+    "hotelNights": 2,
+    "hotelPricePerNight": 1000.00
+  }
+  let returnValue = calculatePriceWithHotel(inputParameters)
+  it('Returns expected format', () => {
+    expect(returnValue).to.have.keys(["adult", "kid02", "kid35", "kid611"])
+  })
+  it('Throws error when first level keys are incomplete', () => {
+    let firstLevelKeys = ["basePrice", "hotelNights", "hotelPricePerNight"]
+    let randomInt = Math.floor(Math.random() * Math.floor(3))
+    let keyToPop = firstLevelKeys[randomInt]
+    delete inputParameters[keyToPop];
+    expect(()=>calculatePriceWithHotel(inputParameters)).to.throw("Incomplete input parameters")
+  })
+})
 
 describe('Compute Total using base price only', ()=> {
+  let returnValue = calculateTotal(exampleInputValues)
   it("Module Imported", ()=> {
     assert.exists(calculateTotal)
   })
@@ -43,4 +68,6 @@ describe('Compute Total using base price only', ()=> {
     })           
   })
 })
+
+
 
