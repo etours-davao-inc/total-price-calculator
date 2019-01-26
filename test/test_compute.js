@@ -1,8 +1,6 @@
-const assert = require('chai').assert
-const expect = require('chai').expect
-const calculateTotal = require('../calculateTotal.js').calculateTotal
-const requiredReturnKeys = require('../Configurations.js').requiredReturnKeys
-const exampleInputValues = require('../Configurations.js').exampleInputValues
+import {assert, expect} from 'chai';
+import calculateTotal from '../calculateTotal.js'
+import {requiredReturnKeys, exampleInputValues} from '../Configurations.js'
 
 var returnValue = calculateTotal(exampleInputValues)
 
