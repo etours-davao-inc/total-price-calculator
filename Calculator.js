@@ -1,4 +1,3 @@
-
 // InputValues : {
 //  adult: [4,400],
 //  kid02: [1,100],
@@ -6,20 +5,25 @@
 //  kid611: [3,300],
 // }
 const calculateTotal = (input) => {
-  // Initialize Return Object Data Structure
-  let returnObject = {total: 0, downpayment: 0, balance: 0}
-  let objectKeys = Object.keys(input)
-  // Iterates input & do computation on each item
-  // Aggregate total, downpayment, balance
-  objectKeys.forEach((key)=> {
-    let item = input[key]
-    let product = item[0] * item[1]
-    returnObject[key] = product
-    returnObject.total += product
-    returnObject.downpayment = returnObject.total/2
-    returnObject.balance = returnObject.total - returnObject.downpayment
-  }) 
-  return returnObject
+  let adult = input.adult[0]*input.adult[1]
+  let kid02 = input.kid02[0]*input.kid02[1] 
+  let kid35 = input.kid35[0]*input.kid35[1]
+  let kid611 = input.kid611[0]*input.kid611[1] 
+  let total = adult + kid02 + kid35 + kid611
+  let downpayment = total/2
+  let balance = total - downpayment
+  
+  let result = {
+    "adult": adult,
+    "kid02": kid02,
+    "kid35": kid35,
+    "kid611": kid611,
+    "downpayment": downpayment,
+    "total": total,
+    "balance": balance,
+    }
+    
+  return result
 }
 
 export {calculateTotal};
