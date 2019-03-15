@@ -8,7 +8,7 @@ const calculateTotal = (input) => {
   let downpayment = total/2
   let balance = total - downpayment
   
-  let computedValues = {
+  let result = {
     "adult": adult,
     "kid02": kid02,
     "kid35": kid35,
@@ -18,7 +18,7 @@ const calculateTotal = (input) => {
     "balance": balance,
     }
     
-  return computedValues
+  return result
 }
 
 const calculatePriceWithHotel = (input) => {
