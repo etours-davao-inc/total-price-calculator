@@ -7,13 +7,13 @@
 
 const Calculate = (input) => {
   if (input.hotelNights) {
-    return calculateTotal2(input)
+    return calculateWithHotel(input)
   } else {
-    return calculateTotal(input)
+    return calculate(input)
   }
 }
 
-const calculateTotal = (input) => {
+const calculate = (input) => {
   let adult = input.adult[0]*input.adult[1]
   let kid02 = input.kid02[0]*input.kid02[1] 
   let kid35 = input.kid35[0]*input.kid35[1]
@@ -39,7 +39,7 @@ const calculateTotal = (input) => {
   return result
 }
 
-const calculateTotal2 = (input) => {
+const calculateWithHotel = (input) => {
   let totalHotelPrice = input.hotelNights * input.hotelPricePerNight
   let adult = input.basePrice.adult[0]*input.basePrice.adult[1] + totalHotelPrice
   let kid02 = input.basePrice.kid02[0]*input.basePrice.kid02[1] 
