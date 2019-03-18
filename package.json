@@ -4,6 +4,7 @@
   "description": "Price computation in Javascript",
   "main": "compute.js",
   "scripts": {
+    "build": "babel Calculator.js -o calculate.js",
     "start": "nodemon --exec babel-node ./calculateTotal.js",
     "test": "./node_modules/.bin/mocha --compilers js:@babel/register"
   },
@@ -20,6 +21,7 @@
     "@babel/preset-env": "^7.3.1",
     "@babel/register": "^7.0.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.9"
