@@ -2,9 +2,9 @@
   "name": "price-compute-js",
   "version": "1.0.0",
   "description": "Price computation in Javascript",
-  "main": "compute.js",
+  "main": "/dist/index.js",
   "scripts": {
-    "build": "babel Calculator.js -o calculate.js",
+    "build": "babel Calculator.js -o ./dist/index.js",
     "start": "nodemon --exec babel-node ./calculateTotal.js",
     "test": "./node_modules/.bin/mocha --compilers js:@babel/register"
   },
