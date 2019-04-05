@@ -1,5 +1,5 @@
 import {assert, expect} from 'chai';
-import {Calculate} from '../Calculator.js'
+import {Calculate} from '../index.js'
 import { input1, input2, input3 } from '../Configurations.js'
 import { output1, output2, output3 } from '../Configurations.js'
 
