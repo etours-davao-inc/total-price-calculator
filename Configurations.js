@@ -30,14 +30,14 @@ module.exports = {
     kid611: 800 
   },  
   input3 : {
-    basePrice: {
-      adults: [4,400],
-      kid02: [1,100],
-      kid35: [2,200],
-      kid611: [3,0],
-    },
+    adults: [4,400],
+    kid02: [1,100],
+    kid35: [2,200],
+    kid611: [3,0],
     hotelNights: 2,
-    hotelPrice: 500.00  
+    hotel : {
+      price: 500.00  
+    }
   },
   output3 : { 
     total: 4400,
