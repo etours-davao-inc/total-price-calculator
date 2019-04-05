@@ -36,6 +36,7 @@ const calculate = (input) => {
     "total": total,
     "balance": balance,
   }
+  // console.log(result)
   return result
 }
 
@@ -63,6 +64,7 @@ const calculateWithHotel = (input) => {
     "total": total,
     "balance": balance,
   }
+  console.log(result)
   return result
 }
 
