@@ -1,5 +1,5 @@
-import {assert, expect} from 'chai';
-import {Calculate} from '../index.js'
+import { expect } from 'chai';
+import { Calculate } from '../index.js'
 import { input1, input2, input3 } from '../Configurations.js'
 import { output1, output2, output3 } from '../Configurations.js'
 
@@ -15,7 +15,7 @@ describe("Check correctness of return value", () => {
   it("Input 3 returns expected output", () => {
     let returnValue = Calculate(input3)
     expect(returnValue).to.eql(output3)
-  }) 
+  })
 })
 
 
