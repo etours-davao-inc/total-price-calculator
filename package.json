@@ -4,7 +4,7 @@
   "description": "Price computation in Javascript",
   "main": "/dist/index.js",
   "scripts": {
-    "build": "babel Calculator.js -o ./dist/index.js",
+    "build": "babel index.js -o ./dist/index.js",
     "start": "nodemon --exec babel-node ./calculateTotal.js",
     "test": "./node_modules/.bin/mocha --compilers js:@babel/register"
   },
