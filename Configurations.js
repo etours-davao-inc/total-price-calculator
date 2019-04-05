@@ -34,7 +34,9 @@ module.exports = {
     kid02: [1,100],
     kid35: [2,200],
     kid611: [3,0],
-    hotelNights: 2,
+    tourDates: {
+      hotelNights: 2,
+    },
     hotel : {
       price: 500.00  
     }
