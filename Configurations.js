@@ -37,7 +37,7 @@ module.exports = {
       kid611: [3,0],
     },
     hotelNights: 2,
-    hotelPricePerNight: 500.00  
+    hotelPrice: 500.00  
   },
   output3 : { 
     total: 4400,

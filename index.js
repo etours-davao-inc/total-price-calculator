@@ -40,7 +40,7 @@ const calculate = (input) => {
 }
 
 const calculateWithHotel = (input) => {
-  let totalHotelPrice = input.hotelNights * input.hotelPricePerNight
+  let totalHotelPrice = input.hotelNights * input.hotelPrice
   let adults = input.basePrice.adults[0]*input.basePrice.adults[1] + totalHotelPrice
   let kid02 = input.basePrice.kid02[0]*input.basePrice.kid02[1] 
   let kid35 = input.basePrice.kid35[0]*input.basePrice.kid35[1]
