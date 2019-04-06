@@ -2,14 +2,13 @@ export const Calculate = (input) => {
   let {adults_item, adults_total} = setAdultItemAndTotal(input)
   let kid02 = input.kid02[0] * input.kid02[1]
   let kid35 = input.kid35[0] * input.kid35[1]
-  let kid611_item = 0; 
-  let kid611_total = 0;
-  if ((input.kid611[1] > 0) && (input.kid611[0] > 0)) {
-    kid611_item = input.kid611[1]
-    kid611_total = input.kid611[0] * kid611_item
-  } else if (input.kid611[0] > 0) {
+  let kid611_item, kid611_total;
+  if (input.kid611[0] > 0) {
     kid611_item = adults_item / 2
     kid611_total = input.kid611[0] * kid611_item
+  } else {
+    kid611_item = 0; 
+    kid611_total = 0;
   }
   let total = adults_total + kid02 + kid35 + kid611_total
   let downpayment = total / 2

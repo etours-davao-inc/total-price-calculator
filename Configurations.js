@@ -10,16 +10,16 @@ module.exports = {
       adults: 400,
       kid02: 100,
       kid35: 200,
-      kid611: 300
+      kid611: 200
     },
     total: {
       adults: 1600,
       kid02: 100,
       kid35: 400,
-      kid611: 900,
-      total: 3000,
-      downpayment: 1500,
-      balance: 1500,      
+      kid611: 600,
+      total: 2700,
+      downpayment: 1350,
+      balance: 1350,      
     }
 
   },
